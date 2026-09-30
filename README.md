@@ -1,15 +1,17 @@
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://irc-simon.streamlit.app)
+
 # Interest Rate Calculator (Excel → Python)
 
 A Python and Streamlit rebuild of the BWIA 121 Interest Rate Calculator workbook by Simon Motlhodimang (North-West University). The app has the workbook's six tools:
 
-| Page | What it does |
-|---|---|
-| Rate converter | Convert between effective annual, effective periodic, nominal, simple and continuous rates |
-| Single investments | Solve for future value, present value, term, rate or interest earned on one amount |
-| Annuities | Level payments in arrears or in advance: values, installments, term and rate |
-| Loans | Installments, balances, interest/capital split, year totals and an amortisation schedule |
-| Increasing annuities | Geometric and stepped increasing annuities, plus the retirement plan |
-| The Easy Broker | Share purchase costs in USD and ZAR, and projected values from simulated returns |
+| Page                 | What it does                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| Rate converter       | Convert between effective annual, effective periodic, nominal, simple and continuous rates |
+| Single investments   | Solve for future value, present value, term, rate or interest earned on one amount         |
+| Annuities            | Level payments in arrears or in advance: values, installments, term and rate               |
+| Loans                | Installments, balances, interest/capital split, year totals and an amortisation schedule   |
+| Increasing annuities | Geometric and stepped increasing annuities, plus the retirement plan                       |
+| The Easy Broker      | Share purchase costs in USD and ZAR, and projected values from simulated returns           |
 
 The original workbook is kept in `reference/` and serves as the test oracle. On 1,056 compared outputs, Python matches Excel to floating-point precision everywhere the workbook's formula is correct (largest difference 8.6 × 10⁻¹³). The remaining 227 outputs are 16 documented Excel formula defects, each proven by recreating Excel's wrong formula and cross-checking Python's answer independently. See [`docs/validation_report.md`](docs/validation_report.md).
 
@@ -124,14 +126,14 @@ The formulas are also shown in each page's "Formulas" expander.
 
 The goal was the same financial model, not a cell-by-cell copy. The main translation patterns were:
 
-| In Excel | In Python |
-|---|---|
+| In Excel                                                                                  | In Python                                                                 |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | 125 converter formulas (a 5 × 5 grid, copied onto five sheets) and 24-branch nested `IF`s | 10 formulas in `rates.py` (5 into and 5 out of the effective annual rate) |
-| `BACKROOM1` helper cells | Named functions with docstrings that cite the original cell |
-| Separate arrears and advance formula columns | One function with a `timing` argument |
-| Text dropdowns (`"continous"`, `"SIMPLE "`) | Enums |
-| `#NUM!` / `#DIV/0!` / `"ERROR"` | `CalculationError("…why…")` |
-| `RAND()`, `INDIRECT()`, a Microsoft 365 FX data type | Seeded RNG, CSV lookups, an editable rate with an optional live fetch |
+| `BACKROOM1` helper cells                                                                  | Named functions with docstrings that cite the original cell               |
+| Separate arrears and advance formula columns                                              | One function with a `timing` argument                                     |
+| Text dropdowns (`"continous"`, `"SIMPLE "`)                                               | Enums                                                                     |
+| `#NUM!` / `#DIV/0!` / `"ERROR"`                                                           | `CalculationError("…why…")`                                               |
+| `RAND()`, `INDIRECT()`, a Microsoft 365 FX data type                                      | Seeded RNG, CSV lookups, an editable rate with an optional live fetch     |
 
 The cell-by-cell mapping is in [`docs/excel_to_python_mapping.md`](docs/excel_to_python_mapping.md).
 
@@ -139,14 +141,14 @@ The cell-by-cell mapping is in [`docs/excel_to_python_mapping.md`](docs/excel_to
 
 You chose "fix and document". The workbook has 16 formula defects that change results (D1–D16) and 2 behavioural issues (D17–D18). Python uses the mathematically correct formula in each case:
 
-| ID | Where | Excel's problem |
-|---|---|---|
-| D1–D7 | Rate converters | fixed 12 instead of p; ln(1+i) raised to a power; continuous → EA returns a periodic rate; missing CON → CON; inconsistent term; broken simple rows in grids 4–5 |
-| D8–D10 | Single investments | interest earned mixes two questions; operator precedence in the EA rate; continuous interest earned reads a blank cell |
-| D11–D13 | Annuities | FV-in-arrears bracket; advance term multiplies instead of divides; "interest" outputs are value ratios, not rates |
-| D14–D16 | Loans | advance uses arrears formulas; i instead of d; "balance after T+1" is not a balance |
-| D17 | All sheets | dropdowns copy values that go stale |
-| D18 | The Easy Broker | 3 companies can't be priced; volatile `RAND()`; FX needs Microsoft 365 |
+| ID      | Where              | Excel's problem                                                                                                                                                  |
+| ------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D1–D7   | Rate converters    | fixed 12 instead of p; ln(1+i) raised to a power; continuous → EA returns a periodic rate; missing CON → CON; inconsistent term; broken simple rows in grids 4–5 |
+| D8–D10  | Single investments | interest earned mixes two questions; operator precedence in the EA rate; continuous interest earned reads a blank cell                                           |
+| D11–D13 | Annuities          | FV-in-arrears bracket; advance term multiplies instead of divides; "interest" outputs are value ratios, not rates                                                |
+| D14–D16 | Loans              | advance uses arrears formulas; i instead of d; "balance after T+1" is not a balance                                                                              |
+| D17     | All sheets         | dropdowns copy values that go stale                                                                                                                              |
+| D18     | The Easy Broker    | 3 companies can't be priced; volatile `RAND()`; FX needs Microsoft 365                                                                                           |
 
 The validation report shows each one with Excel's value, Python's value, and how Python's value was checked.
 
