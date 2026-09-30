@@ -1,0 +1,346 @@
+{
+  "source": "INTEREST-RATE-CALCULATOR-48581275.xlsx",
+  "engine": "Microsoft Excel (values saved in the workbook)",
+  "scenarios": [
+    {
+      "id": "rate_converter_grid1/as_shipped",
+      "module": "rate_converter_grid1",
+      "params": {
+        "value": 0.08,
+        "from_periods": 4.0,
+        "from_type": "Effective annual",
+        "from_years": 6.0,
+        "to_periods": 1.0,
+        "to_type": "Nominal",
+        "to_years": 6.0
+      },
+      "cells": {
+        "converted_rate": "1. RATE CONVERTER!O17"
+      },
+      "outputs": {
+        "converted_rate": 0.08000000000000007
+      }
+    },
+    {
+      "id": "rate_converter_grid2/as_shipped",
+      "module": "rate_converter_grid2",
+      "params": {
+        "value": 0.07,
+        "from_periods": 12.0,
+        "from_type": "Effective periodic",
+        "from_years": 1.0,
+        "to_periods": 4.0,
+        "to_type": "Effective periodic",
+        "to_years": 1.0
+      },
+      "cells": {
+        "converted_rate": "2. SINGLE INVESTMENTS!E19"
+      },
+      "outputs": {
+        "converted_rate": 0.2250430000000001
+      }
+    },
+    {
+      "id": "rate_converter_grid3/as_shipped",
+      "module": "rate_converter_grid3",
+      "params": {
+        "value": 0.08,
+        "from_periods": 1.0,
+        "from_type": "Continuous",
+        "from_years": 1.0,
+        "to_periods": 12.0,
+        "to_type": "Effective annual",
+        "to_years": 1.0
+      },
+      "cells": {
+        "converted_rate": "3. ANNUITIES!L17"
+      },
+      "outputs": {
+        "converted_rate": 0.0066889383540194025
+      }
+    },
+    {
+      "id": "rate_converter_grid4/as_shipped",
+      "module": "rate_converter_grid4",
+      "params": {
+        "value": 0.06,
+        "from_periods": 4.0,
+        "from_type": "Nominal",
+        "from_years": 6.0,
+        "to_periods": 2.0,
+        "to_type": "Effective periodic",
+        "to_years": 6.0
+      },
+      "cells": {
+        "converted_rate": "4.LOANS!J17"
+      },
+      "outputs": {
+        "converted_rate": 0.030224999999999724
+      }
+    },
+    {
+      "id": "rate_converter_grid5/as_shipped",
+      "module": "rate_converter_grid5",
+      "params": {
+        "value": 0.09,
+        "from_periods": 12.0,
+        "from_type": "Nominal",
+        "from_years": 1.0,
+        "to_periods": 12.0,
+        "to_type": "Effective periodic",
+        "to_years": 1.0
+      },
+      "cells": {
+        "converted_rate": "5. INCREASING ANNUITIES!G41"
+      },
+      "outputs": {
+        "converted_rate": 0.007500000000000062
+      }
+    },
+    {
+      "id": "single_investment/as_shipped",
+      "module": "single_investment",
+      "params": {
+        "fv": 10000.0,
+        "pv": 2000.0,
+        "rate": 0.1,
+        "years": 10.0,
+        "periods_per_year": 8.0,
+        "outcome": "Future value",
+        "interest_type": "Simple"
+      },
+      "cells": {
+        "answer": "2. SINGLE INVESTMENTS!K16",
+        "years_out": "2. SINGLE INVESTMENTS!K17",
+        "rate_out": "2. SINGLE INVESTMENTS!K18"
+      },
+      "outputs": {
+        "answer": 18000.0,
+        "years_out": "-",
+        "rate_out": "-"
+      }
+    },
+    {
+      "id": "annuities/as_shipped",
+      "module": "annuities",
+      "params": {
+        "installment": 5000.0,
+        "rate": 0.020201340026755776,
+        "years": 5.0,
+        "periods_per_year": 12.0,
+        "pv": 5200.0,
+        "fv": 6600.0
+      },
+      "cells": {
+        "arrears.future_value": "3. ANNUITIES!P24",
+        "arrears.present_value": "3. ANNUITIES!P25",
+        "arrears.years_from_fv": "3. ANNUITIES!P26",
+        "arrears.years_from_pv": "3. ANNUITIES!P27",
+        "arrears.installment_from_fv": "3. ANNUITIES!P28",
+        "arrears.installment_from_pv": "3. ANNUITIES!P29",
+        "arrears.rate_from_fv": "3. ANNUITIES!P30",
+        "arrears.rate_from_pv": "3. ANNUITIES!P31",
+        "advance.future_value": "3. ANNUITIES!R24",
+        "advance.present_value": "3. ANNUITIES!R25",
+        "advance.years_from_fv": "3. ANNUITIES!R26",
+        "advance.years_from_pv": "3. ANNUITIES!R27",
+        "advance.installment_from_fv": "3. ANNUITIES!R28",
+        "advance.installment_from_pv": "3. ANNUITIES!R29",
+        "advance.rate_from_fv": "3. ANNUITIES!R30",
+        "advance.rate_from_pv": "3. ANNUITIES!R31"
+      },
+      "outputs": {
+        "arrears.future_value": 821707.1041672128,
+        "arrears.present_value": 172960.2558944753,
+        "arrears.years_from_fv": 0.10965180752473648,
+        "arrears.years_from_pv": 0.08847179842967073,
+        "arrears.installment_from_fv": 57.466433208602695,
+        "arrears.installment_from_pv": 150.32355187924122,
+        "arrears.rate_from_fv": 2.5150885778307113,
+        "arrears.rate_from_pv": 0.6719286423921126,
+        "advance.future_value": 585848.8571697724,
+        "advance.present_value": 176454.28483491432,
+        "advance.years_from_fv": 0.1118374546910652,
+        "advance.years_from_pv": 0.09027854852499577,
+        "advance.installment_from_fv": 56.32852159074362,
+        "advance.installment_from_pv": 147.34694611879146,
+        "advance.rate_from_fv": 1.7931715102989167,
+        "advance.rate_from_pv": 0.6855025013707922
+      }
+    },
+    {
+      "id": "loans/as_shipped",
+      "module": "loans",
+      "params": {
+        "principal": 250000.0,
+        "installment": 10000.0,
+        "years": 7.7315068493150685,
+        "rate": 0.06,
+        "periods_per_year": 2.0,
+        "year_T": 2.0
+      },
+      "cells": {
+        "arrears.installment": "4.LOANS!P27",
+        "arrears.loan_amount": "4.LOANS!P28",
+        "arrears.balance_at_T": "4.LOANS!P29",
+        "arrears.interest_next_payment": "4.LOANS!P30",
+        "arrears.capital_next_payment": "4.LOANS!P31",
+        "arrears.payments_needed": "4.LOANS!P32",
+        "arrears.last_payment": "4.LOANS!P33",
+        "arrears.capital_in_year_T": "4.LOANS!P34",
+        "arrears.interest_in_year_T": "4.LOANS!P35",
+        "arrears.total_interest": "4.LOANS!P36",
+        "arrears.balance_at_T_plus_1": "4.LOANS!P37",
+        "advance.installment": "4.LOANS!U27",
+        "advance.loan_amount": "4.LOANS!U28",
+        "advance.balance_at_T": "4.LOANS!U29",
+        "advance.interest_next_payment": "4.LOANS!U30",
+        "advance.capital_next_payment": "4.LOANS!U31",
+        "advance.payments_needed": "4.LOANS!U32",
+        "advance.last_payment": "4.LOANS!U33",
+        "advance.total_interest": "4.LOANS!U36"
+      },
+      "outputs": {
+        "arrears.installment": 25259.245907117856,
+        "arrears.loan_amount": 98973.65935597943,
+        "arrears.balance_at_T": 271873.0800000001,
+        "arrears.interest_next_payment": 16312.384800000002,
+        "arrears.capital_next_payment": -6312.384800000002,
+        "arrears.payments_needed": "#NUM!",
+        "arrears.last_payment": "#NUM!",
+        "arrears.capital_in_year_T": -11573.080000000016,
+        "arrears.interest_in_year_T": 31573.080000000016,
+        "arrears.total_interest": -95369.86301369863,
+        "arrears.balance_at_T_plus_1": "#NUM!",
+        "advance.installment": 23829.4772708659,
+        "advance.loan_amount": 104912.07891733819,
+        "advance.balance_at_T": 269248.3104000001,
+        "advance.interest_next_payment": 16154.898624000003,
+        "advance.capital_next_payment": -6154.898624000003,
+        "advance.payments_needed": "#NUM!",
+        "advance.last_payment": "#NUM!",
+        "advance.total_interest": -95369.86301369863
+      }
+    },
+    {
+      "id": "increasing_annuities/as_shipped",
+      "module": "increasing_annuities",
+      "params": {
+        "rate": 0.02,
+        "payment": 10000.0,
+        "years": 10.0,
+        "periods_per_year": 4.0,
+        "k": 4.0,
+        "m": 10.0,
+        "growth": 0.05,
+        "pv": 400000.0,
+        "fv": 800000.0
+      },
+      "cells": {
+        "stepped.arrears.installment_from_fv": "5. INCREASING ANNUITIES!E23",
+        "stepped.arrears.installment_from_pv": "5. INCREASING ANNUITIES!E24",
+        "stepped.arrears.future_value": "5. INCREASING ANNUITIES!E25",
+        "stepped.arrears.present_value": "5. INCREASING ANNUITIES!E26",
+        "stepped.advance.installment_from_fv": "5. INCREASING ANNUITIES!G23",
+        "stepped.advance.installment_from_pv": "5. INCREASING ANNUITIES!G24",
+        "stepped.advance.future_value": "5. INCREASING ANNUITIES!G25",
+        "stepped.advance.present_value": "5. INCREASING ANNUITIES!G26",
+        "geometric.arrears.installment_from_fv": "5. INCREASING ANNUITIES!K23",
+        "geometric.arrears.installment_from_pv": "5. INCREASING ANNUITIES!K24",
+        "geometric.arrears.future_value": "5. INCREASING ANNUITIES!K25",
+        "geometric.arrears.present_value": "5. INCREASING ANNUITIES!K26",
+        "geometric.advance.installment_from_fv": "5. INCREASING ANNUITIES!M23",
+        "geometric.advance.installment_from_pv": "5. INCREASING ANNUITIES!M24",
+        "geometric.advance.future_value": "5. INCREASING ANNUITIES!M25",
+        "geometric.advance.present_value": "5. INCREASING ANNUITIES!M26"
+      },
+      "outputs": {
+        "stepped.arrears.installment_from_fv": 10869.556834198973,
+        "stepped.arrears.installment_from_pv": 12000.206307913606,
+        "stepped.arrears.future_value": 736000.567643157,
+        "stepped.arrears.present_value": 333327.60265647905,
+        "stepped.advance.installment_from_fv": 10656.42826882252,
+        "stepped.advance.installment_from_pv": 11764.908145013338,
+        "stepped.advance.future_value": 750720.5789960203,
+        "stepped.advance.present_value": 339994.1547096087,
+        "geometric.arrears.installment_from_fv": 4966.939791594398,
+        "geometric.arrears.installment_from_pv": 5483.600033313659,
+        "geometric.arrears.future_value": 1610649.6828365987,
+        "geometric.arrears.present_value": 729447.8035778366,
+        "geometric.advance.installment_from_fv": 4869.5488152886255,
+        "geometric.advance.installment_from_pv": 5376.078464032998,
+        "geometric.advance.future_value": 1642862.6764933309,
+        "geometric.advance.present_value": 744036.7596493934
+      }
+    },
+    {
+      "id": "retirement/as_shipped",
+      "module": "retirement",
+      "params": {
+        "lump_sum": 15000.0,
+        "rate": 0.007500000000000062,
+        "inflation": 0.06,
+        "lump_sum_periods_per_year": 12.0,
+        "lump_sum_years": 40.0,
+        "contribution_k": 12.0,
+        "contribution_m": 40.0,
+        "first_withdrawal_today": 4000.0,
+        "years_to_inflate": 40.0,
+        "withdrawal_k": 12.0,
+        "withdrawal_m": 20.0
+      },
+      "cells": {
+        "first_withdrawal": "5. INCREASING ANNUITIES!N36",
+        "withdrawals_fv": "5. INCREASING ANNUITIES!N37",
+        "withdrawals_pv": "5. INCREASING ANNUITIES!N38",
+        "lump_sum_fv": "5. INCREASING ANNUITIES!N39",
+        "first_contribution": "5. INCREASING ANNUITIES!N40"
+      },
+      "outputs": {
+        "first_withdrawal": 41142.87174850371,
+        "withdrawals_fv": 42651411.85893395,
+        "withdrawals_pv": 7097742.782027282,
+        "lump_sum_fv": 541648.5306610784,
+        "first_contribution": 686.1994856251627
+      }
+    },
+    {
+      "id": "broker/as_shipped",
+      "module": "broker",
+      "params": {
+        "exchange": "SSE",
+        "exchange_company": "Huawei",
+        "exchange_price": 29.0,
+        "exchange_shares": 10.0,
+        "country": "China",
+        "country_company": "Huawei",
+        "country_price": 29.0,
+        "country_shares": 6.0,
+        "years": 5.0,
+        "usd_zar": 17.9954,
+        "return.SouthAfrica": 0.23877545500305564,
+        "return.Germany": 0.2451629221066175,
+        "return.USA": 0.08557030218644512,
+        "return.Japan": 0.20988616748431096,
+        "return.Russia": 0.017661116422336552,
+        "return.Brazil": 0.1649793968627249,
+        "return.China": 0.12039348165738746,
+        "return.UK": 0.1003441231541588
+      },
+      "cells": {
+        "exchange_cost_usd": "TEB!I8",
+        "exchange_cost_zar": "TEB!I9",
+        "country_cost_usd": "TEB!I18",
+        "country_cost_zar": "TEB!I19",
+        "projected_value": "TEB!I26"
+      },
+      "outputs": {
+        "exchange_cost_usd": 290.0,
+        "exchange_cost_zar": 5218.666,
+        "country_cost_usd": 174.0,
+        "country_cost_zar": 3131.1996,
+        "projected_value": 5527.9438138453315
+      }
+    }
+  ]
+}

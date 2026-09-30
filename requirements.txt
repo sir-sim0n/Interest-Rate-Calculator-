@@ -1,0 +1,2 @@
+# Runtime: the app only needs Streamlit (pandas comes with it).
+streamlit>=1.64.0

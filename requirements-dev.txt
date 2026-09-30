@@ -1,0 +1,4 @@
+-r requirements.txt
+# Tests and the tools/ scripts
+pytest>=8
+openpyxl>=3.1

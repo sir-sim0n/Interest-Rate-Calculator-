@@ -1,0 +1,51 @@
+country,country_excel,exchange,exchange_name,company,company_excel,price_usd
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Naspers,Naspers,20.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,MTN Group,MTN Group,25.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Sasol,Sasol,18.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Shoprite Holdings,ShopriteHoldings,22.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Anglo American,AngloAmerican,19.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Discovery Limited,DiscoveryLimited,14.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Standard Bank Group,StandardBankGroup,16.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Absa Group Limited,Absa Group Limited,17.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,FirstRand Limited,FirstRandLimited,18.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Sanlam,Sanlam,19.0
+South Africa,SouthAfrica,JSE,Johannesburg Stock Exchange,Eskom Holdings,EskomHoldings,20.0
+Germany,Germany,FSE,Frankfurt Stock Exchange,BMW,BMW,24.0
+Germany,Germany,FSE,Frankfurt Stock Exchange,Mercedes-Benz,MercedesBenz,31.0
+USA,USA,Nasdaq,Nasdaq,Apple,Apple,12.0
+USA,USA,Nasdaq,Nasdaq,Amazon,Amazon,19.0
+USA,USA,Nasdaq,Nasdaq,Facebook,Facebook,34.0
+USA,USA,Nasdaq,Nasdaq,Google,Google,29.0
+USA,USA,Nasdaq,Nasdaq,Intel,Intel,32.0
+USA,USA,Nasdaq,Nasdaq,Microsoft,Microsoft,34.0
+USA,USA,Nasdaq,Nasdaq,Oracle,Oracle,34.0
+USA,USA,Nasdaq,Nasdaq,Visa,Visa,32.0
+USA,USA,Nasdaq,Nasdaq,Cisco Systems,CiscoSystems,21.0
+USA,USA,Nasdaq,Nasdaq,Dell,Dell,25.0
+USA,USA,Nasdaq,Nasdaq,HP,HP,26.0
+Japan,Japan,TSE,Tokyo Stock Exchange,Toyota,Toyota,40.0
+Japan,Japan,TSE,Tokyo Stock Exchange,Nissan,Nissan,12.0
+Japan,Japan,TSE,Tokyo Stock Exchange,Konami,Konami,27.0
+Japan,Japan,TSE,Tokyo Stock Exchange,Subaru,Subaru,10.0
+Japan,Japan,TSE,Tokyo Stock Exchange,Honda,Honda,19.0
+Japan,Japan,TSE,Tokyo Stock Exchange,Sony,Sony,18.0
+Russia,Russia,MOEX,Moscow Exchange,Gazprom,Gazprom,15.0
+Russia,Russia,MOEX,Moscow Exchange,Rosneft,Rosneft,36.0
+Russia,Russia,MOEX,Moscow Exchange,Lukoil,Lukoil,25.0
+Russia,Russia,MOEX,Moscow Exchange,Sberbank,Sberbank,31.0
+Russia,Russia,MOEX,Moscow Exchange,Rostelecom,Rostelecom,29.0
+Brazil,Brazil,BM,B3 / BM&FBovespa (São Paulo),Petrobras,Petrobras,19.0
+Brazil,Brazil,BM,B3 / BM&FBovespa (São Paulo),Banco do Brasil,BancodoBrasil,32.0
+Brazil,Brazil,BM,B3 / BM&FBovespa (São Paulo),Itaú Unibanco,ItaúUnibanco,12.0
+Brazil,Brazil,BM,B3 / BM&FBovespa (São Paulo),Vale,Vale,9.0
+Brazil,Brazil,BM,B3 / BM&FBovespa (São Paulo),JBS,JBS,6.0
+China,China,SSE,Shanghai Stock Exchange,Alibaba Group,AlibabaGroup,12.0
+China,China,SSE,Shanghai Stock Exchange,Tencent Holdings,TencentHoldings,22.0
+China,China,SSE,Shanghai Stock Exchange,Huawei,Huawei,29.0
+China,China,SSE,Shanghai Stock Exchange,China Construction Bank,ChinaConstructionBank,35.0
+China,China,SSE,Shanghai Stock Exchange,Industrial and Commercial Bank of China,Industrial&CommercialBankofChina,23.0
+UK,UK,LSE,London Stock Exchange,HSBC Holdings,HSBCHoldings,40.0
+UK,UK,LSE,London Stock Exchange,Shell,Shell,23.0
+UK,UK,LSE,London Stock Exchange,BP,BP,18.0
+UK,UK,LSE,London Stock Exchange,GlaxoSmithKline,GlaxoSmithKline,31.0
+UK,UK,LSE,London Stock Exchange,British American Tobacco,BritishAmericanTobacco,12.0
